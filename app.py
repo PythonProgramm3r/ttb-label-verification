@@ -208,7 +208,7 @@ if uploaded_files:
                         # Find matching file object to display thumbnail
                         matched_file = next((f for f in uploaded_files if f.name == filename), None)
                         if matched_file:
-                            st.image(matched_file, caption=filename, use_column_width=True)
+                            st.image(matched_file, caption=filename, use_container_width=True)
 
                     with c2:
                         st.markdown("### Rules Checklist")
