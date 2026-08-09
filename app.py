@@ -19,7 +19,7 @@ st.markdown("""
 # 2. GOVERNMENT OFFICIAL BANNER
 st.error("🏛️ **U.S. DEPARTMENT OF THE TREASURY — OFFICIAL USE ONLY**\n\nUnauthorized access, distribution, or misuse of this TTB Internal Compliance Portal is strictly prohibited under federal law.")
 
-st.title("🍷 TTB Label Verification System")
+st.title("🍷 Alcohol and Tobacco Tax and Trade Bureau Label Verification System")
 st.info("**Assessor Note:** To evaluate a batch of labels, please highlight your files and **Drag and Drop** them directly into the gray zone below. (The manual file browser is disabled for batch security protocols).")
 
 # 3. SECURE BACKEND CONNECTION
