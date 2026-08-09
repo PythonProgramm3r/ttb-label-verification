@@ -35,8 +35,7 @@ except KeyError:
 # Initialize the client securely using the new Foundry v1 structure
 client = AsyncOpenAI(
     api_key=api_key,
-    base_url=azure_endpoint,
-    default_query={"api-version": "2024-10-21"}
+    base_url=azure_endpoint
 )
 
 # 4. TTB RULES CHECKLIST (SYSTEM PROMPT)
