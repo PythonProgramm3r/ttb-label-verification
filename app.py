@@ -161,7 +161,7 @@ if uploaded_files:
                         # Display the image using the updated syntax
                         matched_file = next((f for f in uploaded_files if f.name == filename), None)
                         if matched_file:
-                            st.image(matched_file, caption=filename, use_container_width=True)
+                            st.image(matched_file, caption=filename, width="stretch")
                     
                     with c2:
                         if isinstance(details, str):
