@@ -1,7 +1,7 @@
 import streamlit as st
 import asyncio
 import base64
-from openai import AsyncAzureOpenAI
+from openai import AsyncOpenAI
 import json
 
 # 1. PAGE CONFIG & UI LOCKDOWN
@@ -28,16 +28,14 @@ try:
     api_key = st.secrets["AZURE_API_KEY"]
     azure_endpoint = st.secrets["AZURE_ENDPOINT"]
     deployment_name = st.secrets["AZURE_DEPLOYMENT"]
-    api_version = "2024-02-15-preview"
 except KeyError:
     st.error("System Error: Secure Azure credentials not found in environment.")
     st.stop()
 
-# Initialize the Azure client securely
-client = AsyncAzureOpenAI(
+# Initialize the client securely using the new Foundry v1 structure
+client = AsyncOpenAI(
     api_key=api_key,
-    azure_endpoint=azure_endpoint,
-    api_version=api_version
+    base_url=azure_endpoint
 )
 
 # 4. TTB RULES CHECKLIST (SYSTEM PROMPT)
