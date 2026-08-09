@@ -1,4 +1,4 @@
-readme_content = """# TTB Label Verification System
+"""# TTB Label Verification System
 
 An automated, AI-powered compliance verification portal designed to evaluate alcohol beverage labels against mandatory Alcohol and Tobacco Tax and Trade Bureau (TTB) regulatory standards. Built with Python, Streamlit, and Azure OpenAI Service, this application processes batch label uploads concurrently and returns detailed audit findings in real time.
 
