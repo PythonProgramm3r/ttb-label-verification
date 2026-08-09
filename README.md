@@ -1,4 +1,4 @@
-"""# TTB Label Verification System
+# TTB Label Verification System
 
 An automated, AI-powered compliance verification portal designed to evaluate alcohol beverage labels against mandatory Alcohol and Tobacco Tax and Trade Bureau (TTB) regulatory standards. Built with Python, Streamlit, and Azure OpenAI Service, this application processes batch label uploads concurrently and returns detailed audit findings in real time.
 
@@ -44,3 +44,44 @@ The verification engine checks each uploaded label against five core TTB require
 ├── app.py              # Main Streamlit application and async processing pipeline
 ├── requirements.txt    # Python dependencies (streamlit, openai)
 └── README.md           # System documentation
+```
+
+---
+
+## Setup & Local Development
+
+### 1. Prerequisites
+* Python 3.10+ installed locally
+* An active Azure OpenAI resource with a deployed vision-capable model (e.g., `gpt-4.1-mini` or `gpt-4o`)
+
+### 2. Installation
+Clone the repository and install the required dependencies:
+
+```bash
+git clone https://github.com/PythonProgramm3r/ttb-label-verification.git
+cd ttb-label-verification
+pip install -r requirements.txt
+```
+
+### 3. Environment Secrets Configuration
+Create a local `.streamlit/secrets.toml` file to store your Azure credentials securely:
+
+```toml
+AZURE_API_KEY = "your-azure-api-key"
+AZURE_ENDPOINT = "https://your-resource-name.openai.azure.com/"
+AZURE_DEPLOYMENT = "gpt-4.1-mini"
+```
+
+### 4. Running the Application
+Launch the Streamlit portal locally:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Security & Usage Notes
+
+* **Official Use Banner:** Configured with strict internal portal messaging for presentation environments.
+* **Zero Credential Exposure:** Secrets are managed via Streamlit Community Cloud Secrets in production and local `secrets.toml` during development, ensuring no API keys or endpoints are committed to GitHub.
